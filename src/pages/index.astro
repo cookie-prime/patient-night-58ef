@@ -64,6 +64,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         header {
             padding: 2rem 0;
             border-bottom: 1px solid #374151;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1{
             font-size: 2.25em;
@@ -269,6 +272,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             .call-to-action h2{
                 font-size: 2rem;
             }
+             header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header h1{
+                margin-bottom: 1rem;
+            }
         }
         @media (max-width: 480px) {
             .hero h1 {
@@ -291,6 +301,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <header>
         <div class="container">
             <h1>{SITE_TITLE}</h1>
+            <nav>
+                <ul style="display: flex; gap: 1rem; list-style: none;">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
